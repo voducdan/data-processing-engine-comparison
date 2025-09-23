@@ -1,0 +1,18 @@
+hive_metastore_uri: "thrift://localhost:9083"
+table_name: "warehouse.default.sample_table"
+query_template: "SELECT COUNT(*) as total_rows, AVG(price) as avg_price FROM {table}"
+query_parameters: {}
+engines:
+  - "duckdb"
+  - "daft" 
+  - "starrocks"
+output_format: "json"
+iterations: 1
+
+# StarRocks connection settings
+starrocks:
+  host: "localhost"
+  port: 9030
+  user: "root"
+  password: ""
+  database: "iceberg_catalog"
