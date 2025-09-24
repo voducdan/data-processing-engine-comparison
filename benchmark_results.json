@@ -2,7 +2,7 @@
   "benchmark_run": {
     "table_name": "facts.ad_revenue",
     "query": "select\n  user_sur_id, \n  sum(ad_revenue_usd) ad_revenue_usd, \n  sum(ad_impression) ad_impression,\n  sum(ad_load) ad_load,\n  sum(ad_load_failed) ad_load_failed,\n  sum(ad_load_succeeded) ad_load_succeeded,\n  sum(ad_ready) ad_ready,\n  sum(ad_not_ready) ad_not_ready,\n  sum(ad_show_succeeded) ad_show_succeeded,\n  sum(ad_show_failed) ad_show_failed,\n  sum(ad_closed) ad_closed,\n  sum(ad_clicked) ad_clicked\nfrom idz_catalog_silver.facts.ad_revenue\nwhere true\n    and etl_date = '2025-09-11'\ngroup by user_sur_id\n",
-    "hive_metastore_uri": "thrift://104.196.221.45:9083",
+    "hive_metastore_uri": "thrift://localhost:9083",
     "timestamp": "2025-09-24 10:07:02",
     "iterations": 10,
     "multiprocessing": true
