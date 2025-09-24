@@ -26,7 +26,7 @@ engines:
   - "Daft"
   - "StarRocks"
 output_format: "json"
-iterations: 1
+iterations: 10
 
 # StarRocks connection settings
 starrocks:

@@ -20,7 +20,7 @@ class ConfigLoader:
     def from_env() -> BenchmarkConfig:
         """Load configuration from environment variables."""
         return BenchmarkConfig(
-            hive_metastore_uri=os.getenv('HIVE_METASTORE_URI', 'thrift://104.196.221.45:9083'),
+            hive_metastore_uri=os.getenv('HIVE_METASTORE_URI', 'thrift://localhost:9083'),
             table_name=os.getenv('TABLE_NAME', 'facts.ad_revenue'),
             query=os.getenv('QUERY', """
                 select
@@ -93,7 +93,7 @@ class StarRocksConfig:
     """StarRocks connection configuration."""
     
     def __init__(self):
-        self.host = os.getenv('STARROCKS_HOST', '35.196.229.151')
+        self.host = os.getenv('STARROCKS_HOST', 'localhost')
         self.port = int(os.getenv('STARROCKS_PORT', '9030'))
         self.user = os.getenv('STARROCKS_USER', 'root')
         self.password = os.getenv('STARROCKS_PASSWORD', '')
