@@ -621,7 +621,7 @@ def run_single_engine_benchmark(engine_name: str, hive_metastore_uri: str, table
 def main():
     """Main entry point."""
     # Configuration - you can modify these or make them command-line arguments
-    hive_metastore_uri = os.getenv('HIVE_METASTORE_URI', 'thrift://104.196.221.45:9083')
+    hive_metastore_uri = os.getenv('HIVE_METASTORE_URI', 'thrift://localhost:9083')
     table_name = os.getenv('TABLE_NAME', 'facts.ad_revenue')
     
     # Simple query - modify as needed
