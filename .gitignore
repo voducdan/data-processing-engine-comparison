@@ -38,10 +38,6 @@ htmlcov/
 ehthumbs.db
 Thumbs.db
 
-# Benchmark results (generated files)
-benchmark_results*.json
-benchmark_results*.csv
-
 # Environment files (may contain secrets)
 .env
 *.env

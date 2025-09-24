@@ -1,0 +1,515 @@
+{
+  "benchmark_run": {
+    "table_name": "facts.ad_revenue",
+    "query": "select\n  user_sur_id, \n  sum(ad_revenue_usd) ad_revenue_usd, \n  sum(ad_impression) ad_impression,\n  sum(ad_load) ad_load,\n  sum(ad_load_failed) ad_load_failed,\n  sum(ad_load_succeeded) ad_load_succeeded,\n  sum(ad_ready) ad_ready,\n  sum(ad_not_ready) ad_not_ready,\n  sum(ad_show_succeeded) ad_show_succeeded,\n  sum(ad_show_failed) ad_show_failed,\n  sum(ad_closed) ad_closed,\n  sum(ad_clicked) ad_clicked\nfrom idz_catalog_silver.facts.ad_revenue\nwhere true\n    and etl_date = '2025-09-11'\ngroup by user_sur_id\n",
+    "hive_metastore_uri": "thrift://104.196.221.45:9083",
+    "timestamp": "2025-09-24 10:07:02",
+    "iterations": 10,
+    "multiprocessing": true
+  },
+  "aggregated_results": [
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 19056.279800101765,
+      "memory_usage_mb": 572.7109375,
+      "memory_baseline_mb": 517.7046875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 18551.21121229895,
+      "memory_usage_mb": 609.6296875,
+      "memory_baseline_mb": 553.59375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 17934.671766799875,
+      "memory_usage_mb": 538.5765625,
+      "memory_baseline_mb": 487.40625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 22641.54515840055,
+      "memory_usage_mb": 202.1640625,
+      "memory_baseline_mb": 174.3296875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 9883.824883401394,
+      "memory_usage_mb": 48.20625,
+      "memory_baseline_mb": 34.3015625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    }
+  ],
+  "all_iterations": [
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 15524.34354199795,
+      "memory_usage_mb": 397.375,
+      "memory_baseline_mb": 20.171875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 13742.548167007044,
+      "memory_usage_mb": 579.328125,
+      "memory_baseline_mb": 397.390625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 56518.00683399779,
+      "memory_usage_mb": 538.421875,
+      "memory_baseline_mb": 579.328125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 15150.01758300059,
+      "memory_usage_mb": 571.171875,
+      "memory_baseline_mb": 538.4375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 15052.447750000283,
+      "memory_usage_mb": 633.375,
+      "memory_baseline_mb": 571.171875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 14525.59674999793,
+      "memory_usage_mb": 621.75,
+      "memory_baseline_mb": 633.375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 14491.757458003121,
+      "memory_usage_mb": 651.5625,
+      "memory_baseline_mb": 621.75,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 15519.308375005494,
+      "memory_usage_mb": 588.34375,
+      "memory_baseline_mb": 651.5625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 15194.044959003804,
+      "memory_usage_mb": 575.5,
+      "memory_baseline_mb": 588.359375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "DuckDB",
+      "execution_time_ms": 14844.726583003649,
+      "memory_usage_mb": 570.28125,
+      "memory_baseline_mb": 575.5,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 15281.58408300078,
+      "memory_usage_mb": 418.125,
+      "memory_baseline_mb": 19.9375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 13583.720334005193,
+      "memory_usage_mb": 590.78125,
+      "memory_baseline_mb": 404.265625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 51277.062791006756,
+      "memory_usage_mb": 603.15625,
+      "memory_baseline_mb": 590.78125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 16189.571082999464,
+      "memory_usage_mb": 662.96875,
+      "memory_baseline_mb": 603.15625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 17800.618458000827,
+      "memory_usage_mb": 654.3125,
+      "memory_baseline_mb": 662.96875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 13401.413915999,
+      "memory_usage_mb": 698.4375,
+      "memory_baseline_mb": 654.328125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 14561.51412500185,
+      "memory_usage_mb": 674.5,
+      "memory_baseline_mb": 698.4375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 14604.866749999928,
+      "memory_usage_mb": 650.28125,
+      "memory_baseline_mb": 674.5,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 13394.181749987183,
+      "memory_usage_mb": 577.265625,
+      "memory_baseline_mb": 650.296875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Arrow",
+      "execution_time_ms": 15417.57883298851,
+      "memory_usage_mb": 566.46875,
+      "memory_baseline_mb": 577.265625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 15067.437792007695,
+      "memory_usage_mb": 401.828125,
+      "memory_baseline_mb": 20.15625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 13474.136916993302,
+      "memory_usage_mb": 541.21875,
+      "memory_baseline_mb": 398.078125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 48140.23141699727,
+      "memory_usage_mb": 508.359375,
+      "memory_baseline_mb": 541.21875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 16288.302332992316,
+      "memory_usage_mb": 535.5,
+      "memory_baseline_mb": 508.375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14208.386583995889,
+      "memory_usage_mb": 527.5,
+      "memory_baseline_mb": 535.5,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14195.491124992259,
+      "memory_usage_mb": 538.875,
+      "memory_baseline_mb": 527.515625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14781.789000000572,
+      "memory_usage_mb": 616.328125,
+      "memory_baseline_mb": 538.875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14251.708833005978,
+      "memory_usage_mb": 666.375,
+      "memory_baseline_mb": 616.328125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14514.571667008568,
+      "memory_usage_mb": 521.640625,
+      "memory_baseline_mb": 666.375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Polar",
+      "execution_time_ms": 14424.6620000049,
+      "memory_usage_mb": 528.140625,
+      "memory_baseline_mb": 521.640625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 22489.574874998652,
+      "memory_usage_mb": 197.125,
+      "memory_baseline_mb": 19.84375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 16479.46945800504,
+      "memory_usage_mb": 205.125,
+      "memory_baseline_mb": 187.359375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 24336.975291997078,
+      "memory_usage_mb": 212.40625,
+      "memory_baseline_mb": 194.921875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 25856.83862499718,
+      "memory_usage_mb": 199.828125,
+      "memory_baseline_mb": 202.203125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 24210.333583003376,
+      "memory_usage_mb": 198.640625,
+      "memory_baseline_mb": 189.625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 20860.34179200942,
+      "memory_usage_mb": 201.828125,
+      "memory_baseline_mb": 188.78125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 21028.717041990603,
+      "memory_usage_mb": 202.5625,
+      "memory_baseline_mb": 191.46875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 25195.430125007988,
+      "memory_usage_mb": 195.65625,
+      "memory_baseline_mb": 192.484375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 22841.820207991987,
+      "memory_usage_mb": 202.015625,
+      "memory_baseline_mb": 185.640625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "Daft",
+      "execution_time_ms": 23115.950584004167,
+      "memory_usage_mb": 206.453125,
+      "memory_baseline_mb": 190.96875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3610.070166992955,
+      "memory_usage_mb": 49.875,
+      "memory_baseline_mb": 20.140625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3753.925540993805,
+      "memory_usage_mb": 51.390625,
+      "memory_baseline_mb": 32.875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3773.7826250086073,
+      "memory_usage_mb": 52.40625,
+      "memory_baseline_mb": 35.390625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3903.00562500488,
+      "memory_usage_mb": 48.09375,
+      "memory_baseline_mb": 37.40625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3789.2926659988007,
+      "memory_usage_mb": 45.625,
+      "memory_baseline_mb": 34.171875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 4309.978167002555,
+      "memory_usage_mb": 47.171875,
+      "memory_baseline_mb": 32.640625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3709.8435840016464,
+      "memory_usage_mb": 47.265625,
+      "memory_baseline_mb": 35.171875,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3883.6137920006877,
+      "memory_usage_mb": 48.578125,
+      "memory_baseline_mb": 36.265625,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 3785.4873340111226,
+      "memory_usage_mb": 49.375,
+      "memory_baseline_mb": 38.578125,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    },
+    {
+      "engine_name": "StarRocks",
+      "execution_time_ms": 64319.24933299888,
+      "memory_usage_mb": 42.28125,
+      "memory_baseline_mb": 40.375,
+      "success": true,
+      "error_message": null,
+      "row_count": 92033
+    }
+  ],
+  "summary": {
+    "fastest_engine": "StarRocks",
+    "most_memory_efficient": "StarRocks",
+    "success_count": 5,
+    "total_engines": 5
+  }
+}

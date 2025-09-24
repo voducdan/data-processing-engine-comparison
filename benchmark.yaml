@@ -1,4 +1,4 @@
-hive_metastore_uri: "thrift://104.196.221.45:9083"
+hive_metastore_uri: "thrift://localhost:9083"
 table_name: "facts.ad_revenue"
 query_template: |
   select
@@ -26,11 +26,11 @@ engines:
   - "Daft"
   - "StarRocks"
 output_format: "json"
-iterations: 10
+iterations: 1
 
 # StarRocks connection settings
 starrocks:
-  host: "35.196.229.151"
+  host: "localhost"
   port: 9030
   user: "root"
   password: ""
