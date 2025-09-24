@@ -26,7 +26,7 @@ class DaftEngine(BaseEngine):
             # Attempt to read Iceberg table
             df = daft.read_iceberg(table)
             # Convert SQL query to Daft DataFrame operations
-            df = df.where(df["etl_date"] == "2025-09-11") \
+            df = df.where(df["etl_date"] == "2025-08-10") \
                 .groupby("user_sur_id") \
                 .agg([
                     daft.col("ad_revenue_usd").sum().alias("ad_revenue_usd"),

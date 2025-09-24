@@ -23,7 +23,7 @@ class ArrowEngine(BaseEngine):
         
         # Filter the data before converting to Arrow
         filtered_table = table.scan(
-            row_filter="etl_date == '2025-09-11'",
+            row_filter="etl_date == '2025-08-10'",
             selected_fields=(
                 "user_sur_id",
                 "ad_revenue_usd",

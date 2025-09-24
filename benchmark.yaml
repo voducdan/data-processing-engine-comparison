@@ -16,7 +16,7 @@ query_template: |
     sum(ad_clicked) ad_clicked
   from idz_catalog_silver.facts.ad_revenue
   where true
-      and etl_date = '2025-09-11'
+      and etl_date = '2025-08-10'
   group by user_sur_id
 query_parameters: {}
 engines:

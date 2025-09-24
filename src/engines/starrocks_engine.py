@@ -25,6 +25,7 @@ class StarRocksEngine(BaseEngine):
         
         try:
             # Execute query
+            cursor.execute("SET GLOBAL enable_scan_datacache=false;")
             cursor.execute(self.query)
             result = cursor.fetchall()
             
