@@ -28,7 +28,7 @@ def run_single_engine_benchmark(
         successful_runs = []
         
         for i in range(iterations):
-            print(f"  Iteration {i+1}/{iterations}...", end=" ")
+            print(f"  Iteration {i+1}/{iterations} for Engine {engine_name}", end=" ")
             result = engine.benchmark()
             engine_results.append(result)
             

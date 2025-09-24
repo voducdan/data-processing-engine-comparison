@@ -1,11 +1,30 @@
 hive_metastore_uri: "thrift://localhost:9083"
-table_name: "warehouse.default.sample_table"
-query_template: "SELECT COUNT(*) as total_rows, AVG(price) as avg_price FROM {table}"
+table_name: "facts.ad_revenue"
+query_template: |
+  select
+    user_sur_id, 
+    sum(ad_revenue_usd) ad_revenue_usd, 
+    sum(ad_impression) ad_impression,
+    sum(ad_load) ad_load,
+    sum(ad_load_failed) ad_load_failed,
+    sum(ad_load_succeeded) ad_load_succeeded,
+    sum(ad_ready) ad_ready,
+    sum(ad_not_ready) ad_not_ready,
+    sum(ad_show_succeeded) ad_show_succeeded,
+    sum(ad_show_failed) ad_show_failed,
+    sum(ad_closed) ad_closed,
+    sum(ad_clicked) ad_clicked
+  from idz_catalog_silver.facts.ad_revenue
+  where true
+      and etl_date = '2025-09-11'
+  group by user_sur_id
 query_parameters: {}
 engines:
-  - "duckdb"
-  - "daft" 
-  - "starrocks"
+  - "DuckDB"
+  - "Arrow" 
+  - "Polar"
+  - "Daft"
+  - "StarRocks"
 output_format: "json"
 iterations: 1
 
@@ -15,4 +34,4 @@ starrocks:
   port: 9030
   user: "root"
   password: ""
-  database: "iceberg_catalog"
+  database: "facts.ad_revenue"
